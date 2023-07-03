@@ -10,6 +10,7 @@ import UIKit
 class DeliveryCategoryViewController: UIViewController {
 
     @IBOutlet weak var collectiovViewCategory: UICollectionView!
+    @IBOutlet weak var сorrectData: UILabel!
     
     private var viewModel: DeliveryCategoryViewModelProtocol! {
         didSet {
@@ -22,8 +23,13 @@ class DeliveryCategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = DeliveryCategoryViewModel()
-        viewModel.printCat()
         collectiovViewCategory.layer.cornerRadius = 10
+        сorrectData.text = viewModel.сorData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let menuCategoru = segue.destination as! ChoiceOfDishViewController
+        menuCategoru.titleCategory = ""
     }
 }
 
@@ -44,12 +50,9 @@ extension DeliveryCategoryViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 
-extension DeliveryCategoryViewController: UICollectionViewDelegate {
-    
-}
-
-extension DeliveryCategoryViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 343, height: 148)
-    }
-}
+//extension DeliveryCategoryViewController: UICollectionViewDelegate {
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        collectionView.deselectItem(at: indexPath, animated: true)
+//        let choiceOfDish = viewModel
+//    }
+//}

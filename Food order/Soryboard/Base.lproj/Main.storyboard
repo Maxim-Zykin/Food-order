@@ -87,7 +87,7 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Le-eh-eRD">
-                                <rect key="frame" x="16" y="138" width="361" height="631"/>
+                                <rect key="frame" x="16" y="112" width="361" height="657"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fzz-xn-TFx">
                                     <size key="itemSize" width="356" height="93"/>
@@ -147,7 +147,7 @@
                         <constraints>
                             <constraint firstItem="axs-gN-Qci" firstAttribute="top" secondItem="66t-Me-kua" secondAttribute="top" constant="54" id="1lE-sU-LE0"/>
                             <constraint firstItem="HMH-ea-zdR" firstAttribute="top" secondItem="66t-Me-kua" secondAttribute="top" constant="51" id="94y-9O-gmJ"/>
-                            <constraint firstItem="8Le-eh-eRD" firstAttribute="top" secondItem="8no-Om-v0o" secondAttribute="top" constant="35" id="Ljq-v8-7K9"/>
+                            <constraint firstItem="8Le-eh-eRD" firstAttribute="top" secondItem="8no-Om-v0o" secondAttribute="top" constant="9" id="Ljq-v8-7K9"/>
                             <constraint firstItem="geK-xK-M39" firstAttribute="top" secondItem="66t-Me-kua" secondAttribute="top" constant="52" id="Vpf-pt-i1R"/>
                             <constraint firstItem="geK-xK-M39" firstAttribute="leading" secondItem="axs-gN-Qci" secondAttribute="trailing" constant="8" symbolic="YES" id="XyQ-JM-aLM"/>
                             <constraint firstItem="8no-Om-v0o" firstAttribute="trailing" secondItem="8Le-eh-eRD" secondAttribute="trailing" constant="16" id="iML-yE-KSu"/>
@@ -160,16 +160,17 @@
                     <navigationItem key="navigationItem" id="16i-yF-VZS"/>
                     <connections>
                         <outlet property="collectiovViewCategory" destination="8Le-eh-eRD" id="vBU-Ei-GUF"/>
+                        <outlet property="сorrectData" destination="inf-kp-fsJ" id="Gyo-b2-IdU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3z-nU-X6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="159.54198473282443" y="-438.02816901408454"/>
         </scene>
-        <!--View Controller-->
+        <!--Choice Of Dish View Controller-->
         <scene sceneID="UQB-hT-Znf">
             <objects>
-                <viewController id="W8h-bU-SZD" sceneMemberID="viewController">
+                <viewController id="W8h-bU-SZD" customClass="ChoiceOfDishViewController" customModule="Food_order" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xwo-4t-4sK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

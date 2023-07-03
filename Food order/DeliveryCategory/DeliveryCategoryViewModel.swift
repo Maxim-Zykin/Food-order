@@ -9,17 +9,23 @@ import Foundation
 
 protocol DeliveryCategoryViewModelProtocol {
     var category: [Сategory] { get }
+    func сorData() -> String
     func fetchCategoru(completion: @escaping() -> Void)
     func numberOfRows() -> Int
     func cellViewModel(at indexPath: IndexPath) -> DeliveryCategoryCellViewModelProtocol
-    func printCat()
+    //func viewModelForSelectedRow(at indexPath: IndexPath) -> DeliveryCategoryCellViewModelProtocol
 }
 
 class DeliveryCategoryViewModel: DeliveryCategoryViewModelProtocol {
+
     var category: [Сategory] = []
     
-    func printCat() {
-        print(category)
+    func сorData() -> String {
+        let mytime = Date()
+        let format = DateFormatter()
+        format.dateStyle = .long
+        let сorrectData = (format.string(from: mytime))
+        return сorrectData
     }
     
     func fetchCategoru(completion: @escaping () -> Void) {
@@ -37,5 +43,10 @@ class DeliveryCategoryViewModel: DeliveryCategoryViewModelProtocol {
         let category = category[indexPath.row]
         return DeliveryCategoryCellViewModel(category: category)
     }
+    
+//    func viewModelForSelectedRow(at indexPath: IndexPath) -> DeliveryCategoryCellViewModelProtocol {
+//        let category = category[indexPath.row]
+//        return ChoiceOfDishViewModelProtocol
+//    }
 
 }

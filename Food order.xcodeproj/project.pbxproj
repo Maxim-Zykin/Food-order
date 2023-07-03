@@ -18,6 +18,9 @@
 		0C1FEC352A4EA1C600391946 /* DeliveryCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEC342A4EA1C600391946 /* DeliveryCategoryCollectionViewCell.swift */; };
 		0C1FEC372A4EA1EC00391946 /* DeliveryCategoryCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEC362A4EA1EC00391946 /* DeliveryCategoryCollectionViewCellViewModel.swift */; };
 		0C1FEC3A2A4EA23700391946 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEC392A4EA23700391946 /* NetworkManager.swift */; };
+		0C291CFD2A5277DC004AFE97 /* ChoiceOfDishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C291CFC2A5277DC004AFE97 /* ChoiceOfDishViewModel.swift */; };
+		0C291CFF2A5277FB004AFE97 /* ChoiceOfDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C291CFE2A5277FB004AFE97 /* ChoiceOfDishViewController.swift */; };
+		0C291D012A5279C1004AFE97 /* ModelDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C291D002A5279C1004AFE97 /* ModelDish.swift */; };
 		0C739F1F2A5050FB003AF529 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C739F1E2A5050FB003AF529 /* ImageManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,9 @@
 		0C1FEC342A4EA1C600391946 /* DeliveryCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C1FEC362A4EA1EC00391946 /* DeliveryCategoryCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCategoryCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		0C1FEC392A4EA23700391946 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0C291CFC2A5277DC004AFE97 /* ChoiceOfDishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceOfDishViewModel.swift; sourceTree = "<group>"; };
+		0C291CFE2A5277FB004AFE97 /* ChoiceOfDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceOfDishViewController.swift; sourceTree = "<group>"; };
+		0C291D002A5279C1004AFE97 /* ModelDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDish.swift; sourceTree = "<group>"; };
 		0C739F1E2A5050FB003AF529 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +78,7 @@
 				0C1FEC152A4E720700391946 /* SceneDelegate.swift */,
 				0C1FEC302A4EA0CF00391946 /* Models */,
 				0C1FEC282A4E970F00391946 /* DeliveryCategory */,
+				0C291CFB2A52778B004AFE97 /* ChoiceOfDish */,
 				0C1FEC272A4E728300391946 /* Soryboard */,
 				0C1FEC382A4EA21800391946 /* Services */,
 				0C1FEC1C2A4E720800391946 /* Assets.xcassets */,
@@ -103,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				0C1FEC312A4EA11200391946 /* ModelCategory.swift */,
+				0C291D002A5279C1004AFE97 /* ModelDish.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +131,15 @@
 				0C739F1E2A5050FB003AF529 /* ImageManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0C291CFB2A52778B004AFE97 /* ChoiceOfDish */ = {
+			isa = PBXGroup;
+			children = (
+				0C291CFE2A5277FB004AFE97 /* ChoiceOfDishViewController.swift */,
+				0C291CFC2A5277DC004AFE97 /* ChoiceOfDishViewModel.swift */,
+			);
+			path = ChoiceOfDish;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,11 +217,14 @@
 				0C1FEC142A4E720700391946 /* AppDelegate.swift in Sources */,
 				0C1FEC162A4E720700391946 /* SceneDelegate.swift in Sources */,
 				0C739F1F2A5050FB003AF529 /* ImageManager.swift in Sources */,
+				0C291CFD2A5277DC004AFE97 /* ChoiceOfDishViewModel.swift in Sources */,
 				0C1FEC2E2A4E977500391946 /* DeliveryCategoryViewController.swift in Sources */,
 				0C1FEC3A2A4EA23700391946 /* NetworkManager.swift in Sources */,
+				0C291D012A5279C1004AFE97 /* ModelDish.swift in Sources */,
 				0C1FEC372A4EA1EC00391946 /* DeliveryCategoryCollectionViewCellViewModel.swift in Sources */,
 				0C1FEC352A4EA1C600391946 /* DeliveryCategoryCollectionViewCell.swift in Sources */,
 				0C1FEC322A4EA11200391946 /* ModelCategory.swift in Sources */,
+				0C291CFF2A5277FB004AFE97 /* ChoiceOfDishViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

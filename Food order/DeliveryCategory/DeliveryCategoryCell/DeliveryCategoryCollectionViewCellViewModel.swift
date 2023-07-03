@@ -14,6 +14,7 @@ protocol DeliveryCategoryCellViewModelProtocol {
 }
 
 class DeliveryCategoryCellViewModel: DeliveryCategoryCellViewModelProtocol {
+    
     var name: String {
         category.name
     }
