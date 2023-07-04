@@ -28,7 +28,4 @@ class DeliveryCategoryCellViewModel: DeliveryCategoryCellViewModelProtocol {
     required init(category: Сategory) {
         self.category = category
     }
-
-    
-    
 }

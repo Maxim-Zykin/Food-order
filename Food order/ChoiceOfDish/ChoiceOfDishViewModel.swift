@@ -8,5 +8,31 @@
 import Foundation
 
 protocol ChoiceOfDishViewModelProtocol {
-    var category: [Сategory] { get }
+    var dishes: [Dishes] { get }
+    func fetchDish(completion: @escaping() -> Void)
+    func numberOfRows() -> Int
+    func cellViewModel(at indexPath: IndexPath) -> ChoiceOfDishCellViewModelProtocol
+}
+
+class ChoiceOfDishViewModel: ChoiceOfDishViewModelProtocol {
+    
+    var dishes: [Dishes] = []
+    
+    func fetchDish(completion: @escaping () -> Void) {
+        NetworkManager.shared.fetchDataDish { [weak self] dishes in
+            self?.dishes = dishes
+            completion()
+        }
+    }
+    
+    func numberOfRows() -> Int {
+        dishes.count
+    }
+    
+    func cellViewModel(at indexPath: IndexPath) -> ChoiceOfDishCellViewModelProtocol {
+        let dishes = dishes[indexPath.row]
+        return ChoiceOfDishCellViewModel(dishes: dishes)
+    }
+    
+    
 }

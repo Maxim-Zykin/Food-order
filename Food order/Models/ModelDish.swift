@@ -8,7 +8,7 @@
 import Foundation
 
 struct GroupDish: Codable {
-    let сategories: [Dishes]
+    let dishes: [Dishes]
 }
 
 struct Dishes: Codable {

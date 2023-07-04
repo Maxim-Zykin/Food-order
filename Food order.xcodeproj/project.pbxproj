@@ -21,6 +21,8 @@
 		0C291CFD2A5277DC004AFE97 /* ChoiceOfDishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C291CFC2A5277DC004AFE97 /* ChoiceOfDishViewModel.swift */; };
 		0C291CFF2A5277FB004AFE97 /* ChoiceOfDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C291CFE2A5277FB004AFE97 /* ChoiceOfDishViewController.swift */; };
 		0C291D012A5279C1004AFE97 /* ModelDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C291D002A5279C1004AFE97 /* ModelDish.swift */; };
+		0C291D042A52AB65004AFE97 /* ChoiceOfDishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C291D032A52AB65004AFE97 /* ChoiceOfDishCollectionViewCell.swift */; };
+		0C291D062A52AB83004AFE97 /* ChoiceOfDishCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C291D052A52AB83004AFE97 /* ChoiceOfDishCellViewModel.swift */; };
 		0C739F1F2A5050FB003AF529 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C739F1E2A5050FB003AF529 /* ImageManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		0C291CFC2A5277DC004AFE97 /* ChoiceOfDishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceOfDishViewModel.swift; sourceTree = "<group>"; };
 		0C291CFE2A5277FB004AFE97 /* ChoiceOfDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceOfDishViewController.swift; sourceTree = "<group>"; };
 		0C291D002A5279C1004AFE97 /* ModelDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDish.swift; sourceTree = "<group>"; };
+		0C291D032A52AB65004AFE97 /* ChoiceOfDishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceOfDishCollectionViewCell.swift; sourceTree = "<group>"; };
+		0C291D052A52AB83004AFE97 /* ChoiceOfDishCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceOfDishCellViewModel.swift; sourceTree = "<group>"; };
 		0C739F1E2A5050FB003AF529 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,8 +142,18 @@
 			children = (
 				0C291CFE2A5277FB004AFE97 /* ChoiceOfDishViewController.swift */,
 				0C291CFC2A5277DC004AFE97 /* ChoiceOfDishViewModel.swift */,
+				0C291D022A52AB2D004AFE97 /* ChoiceOfDishCell */,
 			);
 			path = ChoiceOfDish;
+			sourceTree = "<group>";
+		};
+		0C291D022A52AB2D004AFE97 /* ChoiceOfDishCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C291D032A52AB65004AFE97 /* ChoiceOfDishCollectionViewCell.swift */,
+				0C291D052A52AB83004AFE97 /* ChoiceOfDishCellViewModel.swift */,
+			);
+			path = ChoiceOfDishCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +229,7 @@
 			files = (
 				0C1FEC2C2A4E976000391946 /* DeliveryCategoryViewModel.swift in Sources */,
 				0C1FEC142A4E720700391946 /* AppDelegate.swift in Sources */,
+				0C291D042A52AB65004AFE97 /* ChoiceOfDishCollectionViewCell.swift in Sources */,
 				0C1FEC162A4E720700391946 /* SceneDelegate.swift in Sources */,
 				0C739F1F2A5050FB003AF529 /* ImageManager.swift in Sources */,
 				0C291CFD2A5277DC004AFE97 /* ChoiceOfDishViewModel.swift in Sources */,
@@ -222,6 +237,7 @@
 				0C1FEC3A2A4EA23700391946 /* NetworkManager.swift in Sources */,
 				0C291D012A5279C1004AFE97 /* ModelDish.swift in Sources */,
 				0C1FEC372A4EA1EC00391946 /* DeliveryCategoryCollectionViewCellViewModel.swift in Sources */,
+				0C291D062A52AB83004AFE97 /* ChoiceOfDishCellViewModel.swift in Sources */,
 				0C1FEC352A4EA1C600391946 /* DeliveryCategoryCollectionViewCell.swift in Sources */,
 				0C1FEC322A4EA11200391946 /* ModelCategory.swift in Sources */,
 				0C291CFF2A5277FB004AFE97 /* ChoiceOfDishViewController.swift in Sources */,

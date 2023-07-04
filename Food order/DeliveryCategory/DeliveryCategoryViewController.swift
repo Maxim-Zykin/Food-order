@@ -25,6 +25,7 @@ class DeliveryCategoryViewController: UIViewController {
         viewModel = DeliveryCategoryViewModel()
         collectiovViewCategory.layer.cornerRadius = 10
         сorrectData.text = viewModel.сorData()
+        navigationItem.backButtonTitle = ""
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
