@@ -28,7 +28,7 @@ class ChoiceOfDishViewController: UIViewController {
         super.viewDidLoad()
         viewModel = ChoiceOfDishViewModel()
         navigationItem.backButtonTitle = ""
-        //navigationItem.title = titleCategory
+        navigationItem.title = titleCategory
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,7 +52,6 @@ extension ChoiceOfDishViewController: UICollectionViewDataSource {
 extension ChoiceOfDishViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
         let info = viewModel.viewModelForSelectedRow(at: indexPath)
         performSegue(withIdentifier: "detainDish", sender: info)
         print("\(info.dishName)")

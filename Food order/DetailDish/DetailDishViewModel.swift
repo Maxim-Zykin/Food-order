@@ -20,7 +20,7 @@ protocol DetailDishViewModelProtocol: AnyObject {
 class DetailDishViewModel: DetailDishViewModelProtocol {
     
     var dishName: String {
-        "---\(dishes.name)"
+        "\(dishes.name)"
     }
     
     var dishImade: Data? {
@@ -28,7 +28,7 @@ class DetailDishViewModel: DetailDishViewModelProtocol {
     }
     
     var dishPrice: String {
-        String(dishes.price)
+        String("\(dishes.price) ₽")
     }
     
     var dishDescription: String {
@@ -36,7 +36,7 @@ class DetailDishViewModel: DetailDishViewModelProtocol {
     }
     
     var dishWeight: String {
-        String(dishes.weight)
+        String("· \(dishes.weight)г")
     }
     
     private let dishes: Dishes

@@ -19,7 +19,7 @@ class DetailDishViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupUI()
+        setupUI()
     }
     
     func setupUI() {
