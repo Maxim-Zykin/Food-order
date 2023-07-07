@@ -12,6 +12,7 @@ protocol ChoiceOfDishViewModelProtocol {
     func fetchDish(completion: @escaping() -> Void)
     func numberOfRows() -> Int
     func cellViewModel(at indexPath: IndexPath) -> ChoiceOfDishCellViewModelProtocol
+    func viewModelForSelectedRow(at indexPath: IndexPath) -> DetailDishViewModelProtocol
 }
 
 class ChoiceOfDishViewModel: ChoiceOfDishViewModelProtocol {
@@ -34,5 +35,9 @@ class ChoiceOfDishViewModel: ChoiceOfDishViewModelProtocol {
         return ChoiceOfDishCellViewModel(dishes: dishes)
     }
     
+    func viewModelForSelectedRow(at indexPath: IndexPath) -> DetailDishViewModelProtocol {
+        let dishes = dishes[indexPath.row]
+        return DetailDishViewModel(dishes: dishes)
+    }
     
 }

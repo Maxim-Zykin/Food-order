@@ -11,11 +11,14 @@ class DeliveryCategoryViewController: UIViewController {
 
     @IBOutlet weak var collectiovViewCategory: UICollectionView!
     @IBOutlet weak var сorrectData: UILabel!
+    var titleCategory: String = ""
     
     private var viewModel: DeliveryCategoryViewModelProtocol! {
         didSet {
             viewModel.fetchCategoru {
-                self.collectiovViewCategory.reloadData()
+                DispatchQueue.main.async {
+                    self.collectiovViewCategory.reloadData()
+                }
             }
         }
     }
@@ -29,8 +32,10 @@ class DeliveryCategoryViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let menuCategoru = segue.destination as! ChoiceOfDishViewController
-        menuCategoru.titleCategory = ""
+        if segue.identifier == "choiceOfDish" {
+            let menuCategoru = segue.destination as! ChoiceOfDishViewController
+            menuCategoru.titleCategory = titleCategory
+        }
     }
 }
 
@@ -51,9 +56,12 @@ extension DeliveryCategoryViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 
-//extension DeliveryCategoryViewController: UICollectionViewDelegate {
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        collectionView.deselectItem(at: indexPath, animated: true)
-//        let choiceOfDish = viewModel
-//    }
-//}
+extension DeliveryCategoryViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let title = viewModel.cellViewModel(at: indexPath)
+        titleCategory = title.name
+        print(title.name)
+        performSegue(withIdentifier: "choiceOfDish", sender: self)
+    }
+}

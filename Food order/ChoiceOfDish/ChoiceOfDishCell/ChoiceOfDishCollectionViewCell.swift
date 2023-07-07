@@ -17,7 +17,7 @@ class ChoiceOfDishCollectionViewCell: UICollectionViewCell {
             self.dishNameLabel.text = viewModel.dishName
             guard let imageData = viewModel.dishImade else { return }
             self.dishImage.image = UIImage(data: imageData)
+            
         }
     }
 }
-
