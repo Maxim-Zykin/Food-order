@@ -12,7 +12,8 @@ protocol DetailDishViewModelProtocol: AnyObject {
     var dishImade: Data? { get }
     var dishPrice: String { get }
     var dishDescription: String { get }
-    var dishWeight: String { get } 
+    var dishWeight: String { get }
+    func addCart()
 //    var dishTegs: [String] { get }
     init(dishes: Dishes)
 }
@@ -40,6 +41,12 @@ class DetailDishViewModel: DetailDishViewModelProtocol {
     }
     
     private let dishes: Dishes
+    
+    func addCart() {
+        let dish = ModelCart(dishName: self.dishName, dishPrice: self.dishPrice, dishCount: 1, imageUrl: self.dishes.imageUrl, dishWeight: self.dishWeight)
+        print(dish.dishName)
+        dishCart.append(dish)
+    }
     
     required init(dishes: Dishes) {
         self.dishes = dishes

@@ -11,12 +11,16 @@ class ChoiceOfDishViewController: UIViewController {
 
     @IBOutlet weak var dishCollection: UICollectionView!
     @IBOutlet weak var tegsSegmented: UISegmentedControl!
+    @IBOutlet weak var indicatorActivity: UIActivityIndicatorView!
     
     private var viewModel: ChoiceOfDishViewModelProtocol! {
         didSet {
+            indicatorActivity.startAnimating()
             viewModel.fetchDish {
                 DispatchQueue.main.async {
                     self.dishCollection.reloadData()
+                    self.indicatorActivity.stopAnimating()
+                    self.indicatorActivity.isHidden = true
                 }
             }
         }
@@ -54,7 +58,5 @@ extension ChoiceOfDishViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let info = viewModel.viewModelForSelectedRow(at: indexPath)
         performSegue(withIdentifier: "detainDish", sender: info)
-        print("\(info.dishName)")
-        print("\(info.dishDescription)")
     }
 }

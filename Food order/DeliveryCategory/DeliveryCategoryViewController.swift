@@ -11,13 +11,18 @@ class DeliveryCategoryViewController: UIViewController {
 
     @IBOutlet weak var collectiovViewCategory: UICollectionView!
     @IBOutlet weak var сorrectData: UILabel!
+    @IBOutlet weak var indicatorActivity: UIActivityIndicatorView!
+    
     var titleCategory: String = ""
     
     private var viewModel: DeliveryCategoryViewModelProtocol! {
         didSet {
+            indicatorActivity.startAnimating()
             viewModel.fetchCategoru {
                 DispatchQueue.main.async {
                     self.collectiovViewCategory.reloadData()
+                    self.indicatorActivity.stopAnimating()
+                    self.indicatorActivity.isHidden = true
                 }
             }
         }
@@ -61,7 +66,6 @@ extension DeliveryCategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let title = viewModel.cellViewModel(at: indexPath)
         titleCategory = title.name
-        print(title.name)
         performSegue(withIdentifier: "choiceOfDish", sender: self)
     }
 }

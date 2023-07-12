@@ -31,7 +31,6 @@ class ChoiceOfDishCellViewModel: ChoiceOfDishCellViewModelProtocol {
         dishes.tegs
     }
     
-   
     var dishName: String {
         dishes.name
     }
@@ -45,6 +44,4 @@ class ChoiceOfDishCellViewModel: ChoiceOfDishCellViewModelProtocol {
     required init(dishes: Dishes) {
         self.dishes = dishes
     }
-    
-    
 }
