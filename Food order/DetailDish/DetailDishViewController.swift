@@ -35,6 +35,7 @@ class DetailDishViewController: UIViewController {
     @IBAction func addCart(_ sender: Any) {
         viewModel.addCart()
         print(dishCart.count)
+        AlertManager.alertAddCart(on: self)
     }
     
 }

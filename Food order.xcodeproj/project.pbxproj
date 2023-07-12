@@ -19,6 +19,7 @@
 		0C1FEC372A4EA1EC00391946 /* DeliveryCategoryCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEC362A4EA1EC00391946 /* DeliveryCategoryCollectionViewCellViewModel.swift */; };
 		0C1FEC3A2A4EA23700391946 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEC392A4EA23700391946 /* NetworkManager.swift */; };
 		0C27B4322A5E80DA0047A9CD /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C27B4312A5E80DA0047A9CD /* CartViewController.swift */; };
+		0C27B4342A5F03420047A9CD /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C27B4332A5F03420047A9CD /* AlertManager.swift */; };
 		0C291CFD2A5277DC004AFE97 /* ChoiceOfDishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C291CFC2A5277DC004AFE97 /* ChoiceOfDishViewModel.swift */; };
 		0C291CFF2A5277FB004AFE97 /* ChoiceOfDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C291CFE2A5277FB004AFE97 /* ChoiceOfDishViewController.swift */; };
 		0C291D012A5279C1004AFE97 /* ModelDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C291D002A5279C1004AFE97 /* ModelDish.swift */; };
@@ -48,6 +49,7 @@
 		0C1FEC362A4EA1EC00391946 /* DeliveryCategoryCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCategoryCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		0C1FEC392A4EA23700391946 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0C27B4312A5E80DA0047A9CD /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		0C27B4332A5F03420047A9CD /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		0C291CFC2A5277DC004AFE97 /* ChoiceOfDishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceOfDishViewModel.swift; sourceTree = "<group>"; };
 		0C291CFE2A5277FB004AFE97 /* ChoiceOfDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceOfDishViewController.swift; sourceTree = "<group>"; };
 		0C291D002A5279C1004AFE97 /* ModelDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDish.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				0C1FEC392A4EA23700391946 /* NetworkManager.swift */,
 				0C739F1E2A5050FB003AF529 /* ImageManager.swift */,
+				0C27B4332A5F03420047A9CD /* AlertManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				0C1FEC3A2A4EA23700391946 /* NetworkManager.swift in Sources */,
 				0C291D012A5279C1004AFE97 /* ModelDish.swift in Sources */,
 				0C1FEC372A4EA1EC00391946 /* DeliveryCategoryCollectionViewCellViewModel.swift in Sources */,
+				0C27B4342A5F03420047A9CD /* AlertManager.swift in Sources */,
 				0C577C572A56A76B006795E7 /* DetailDishViewController.swift in Sources */,
 				0C8E19F12A5D10670078D104 /* CartTableViewCell.swift in Sources */,
 				0C577C5B2A56A912006795E7 /* DetailDishViewModel.swift in Sources */,

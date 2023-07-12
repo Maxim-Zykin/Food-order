@@ -23,6 +23,11 @@ class CartViewController: UIViewController {
         сorrectData.text = viewModel.сorData()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+         tabelViewDish.reloadData()
+    }
 }
 
 extension CartViewController: UITableViewDataSource {
