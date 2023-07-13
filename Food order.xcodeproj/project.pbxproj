@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C09D9882A5FC69400A707D1 /* CorrectDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C09D9872A5FC69400A707D1 /* CorrectDate.swift */; };
 		0C1FEC142A4E720700391946 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEC132A4E720700391946 /* AppDelegate.swift */; };
 		0C1FEC162A4E720700391946 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FEC152A4E720700391946 /* SceneDelegate.swift */; };
 		0C1FEC1B2A4E720700391946 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C1FEC192A4E720700391946 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C09D9872A5FC69400A707D1 /* CorrectDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectDate.swift; sourceTree = "<group>"; };
 		0C1FEC102A4E720700391946 /* Food order.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food order.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C1FEC132A4E720700391946 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C1FEC152A4E720700391946 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				0C1FEC392A4EA23700391946 /* NetworkManager.swift */,
+				0C09D9872A5FC69400A707D1 /* CorrectDate.swift */,
 				0C739F1E2A5050FB003AF529 /* ImageManager.swift */,
 				0C27B4332A5F03420047A9CD /* AlertManager.swift */,
 			);
@@ -285,6 +288,7 @@
 				0C8E19F52A5D12350078D104 /* ModelCart.swift in Sources */,
 				0C1FEC2E2A4E977500391946 /* DeliveryCategoryViewController.swift in Sources */,
 				0C1FEC3A2A4EA23700391946 /* NetworkManager.swift in Sources */,
+				0C09D9882A5FC69400A707D1 /* CorrectDate.swift in Sources */,
 				0C291D012A5279C1004AFE97 /* ModelDish.swift in Sources */,
 				0C1FEC372A4EA1EC00391946 /* DeliveryCategoryCollectionViewCellViewModel.swift in Sources */,
 				0C27B4342A5F03420047A9CD /* AlertManager.swift in Sources */,

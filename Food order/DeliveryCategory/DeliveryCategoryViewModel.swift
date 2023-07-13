@@ -9,7 +9,6 @@ import Foundation
 
 protocol DeliveryCategoryViewModelProtocol {
     var category: [Сategory] { get }
-    func сorData() -> String
     func fetchCategoru(completion: @escaping() -> Void)
     func numberOfRows() -> Int
     func cellViewModel(at indexPath: IndexPath) -> DeliveryCategoryCellViewModelProtocol
@@ -19,14 +18,6 @@ protocol DeliveryCategoryViewModelProtocol {
 class DeliveryCategoryViewModel: DeliveryCategoryViewModelProtocol {
 
     var category: [Сategory] = []
-    
-    func сorData() -> String {
-        let mytime = Date()
-        let format = DateFormatter()
-        format.dateStyle = .long
-        let сorrectData = (format.string(from: mytime))
-        return сorrectData
-    }
     
     func fetchCategoru(completion: @escaping () -> Void) {
         NetworkManager.shared.fetchData { [weak self] category in

@@ -15,18 +15,14 @@ class CartViewController: UIViewController {
     
     
     private var viewModel: CartViewModelProtocol!
+    private var corDate: CorrectDateProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = CartViewModel()
+        corDate = CorrectDateModel()
         tabelViewDish.rowHeight = 85
-        сorrectData.text = viewModel.сorData()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-         tabelViewDish.reloadData()
+        сorrectData.text = corDate.сorDate()
     }
 }
 

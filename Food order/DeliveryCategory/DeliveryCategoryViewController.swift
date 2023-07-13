@@ -28,11 +28,14 @@ class DeliveryCategoryViewController: UIViewController {
         }
     }
     
+    private var corDate: CorrectDateProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = DeliveryCategoryViewModel()
+        corDate = CorrectDateModel()
         collectiovViewCategory.layer.cornerRadius = 10
-        сorrectData.text = viewModel.сorData()
+        сorrectData.text = corDate.сorDate()
         navigationItem.backButtonTitle = ""
     }
     
