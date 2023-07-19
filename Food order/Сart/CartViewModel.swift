@@ -8,21 +8,21 @@
 import Foundation
 
 protocol CartViewModelProtocol {
-    var dishesCart: [ModelCart] { get }
+   // var dishesCart: [ModelCart] { get }
     func numberOfRows() -> Int
     func cellViewModel(at indexPath: IndexPath) -> CartModelViewCellProtocol
 }
 
 class CartViewModel: CartViewModelProtocol {
     
-    var dishesCart: [ModelCart] = dishCart
+    //var dishesCart: [ModelCart] = dishCart
 
     func numberOfRows() -> Int {
-        dishesCart.count
+        dishCart.count
     }
     
     func cellViewModel(at indexPath: IndexPath) -> CartModelViewCellProtocol {
-        let dishesCart = dishesCart[indexPath.row]
+        let dishesCart = dishCart[indexPath.row]
         return CartModelViewCell(dishesCart: dishesCart)
     }
 }

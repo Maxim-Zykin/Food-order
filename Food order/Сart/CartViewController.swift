@@ -29,8 +29,9 @@ class CartViewController: UIViewController, UITableViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         tabelViewDish.reloadData()
-        print("-_-")
-        print("Кол блюд \(viewModel.dishesCart.count)")
+//        DispatchQueue.main.async {
+//            self.tabelViewDish.reloadData()
+//        }
     }
 }
 

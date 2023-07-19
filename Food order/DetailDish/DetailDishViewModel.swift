@@ -44,7 +44,7 @@ class DetailDishViewModel: DetailDishViewModelProtocol {
     
     func addCart() {
         let dish = ModelCart(dishName: self.dishName, dishPrice: self.dishPrice, dishCount: 1, imageUrl: self.dishes.imageUrl, dishWeight: self.dishWeight)
-        print(dish.dishName)
+        //print(dish.dishName)
         dishCart.append(dish)
     }
     
