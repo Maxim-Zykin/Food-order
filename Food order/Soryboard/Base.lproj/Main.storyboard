@@ -520,7 +520,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcO-5H-4pV">
-                                <rect key="frame" x="41" y="383" width="35.333333333333343" height="17"/>
+                                <rect key="frame" x="41" y="383" width="35.666666666666657" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -535,7 +535,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9UE-Yf-a24">
-                                <rect key="frame" x="91.333333333333329" y="383" width="40.666666666666671" height="17"/>
+                                <rect key="frame" x="91.666666666666671" y="383" width="40.333333333333329" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -586,6 +586,7 @@
                         <constraints>
                             <constraint firstItem="srS-bo-RgT" firstAttribute="trailing" secondItem="xuB-jf-oMq" secondAttribute="trailing" constant="16" id="2v0-aS-gcW"/>
                             <constraint firstItem="xuB-jf-oMq" firstAttribute="top" secondItem="MRE-Uf-Kac" secondAttribute="bottom" constant="8" id="3iO-bT-EyL"/>
+                            <constraint firstItem="UcO-5H-4pV" firstAttribute="top" secondItem="efl-kz-EUL" secondAttribute="bottom" constant="48" id="5fy-Ch-CVE"/>
                             <constraint firstItem="xuB-jf-oMq" firstAttribute="leading" secondItem="srS-bo-RgT" secondAttribute="leading" constant="16" id="5mn-wr-d4p"/>
                             <constraint firstItem="srS-bo-RgT" firstAttribute="bottom" secondItem="MRE-Uf-Kac" secondAttribute="bottom" constant="197" id="Afu-82-eNZ"/>
                             <constraint firstItem="xuB-jf-oMq" firstAttribute="top" secondItem="MRE-Uf-Kac" secondAttribute="bottom" constant="8" id="EId-A8-NCv"/>

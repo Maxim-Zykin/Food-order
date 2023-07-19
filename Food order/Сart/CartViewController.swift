@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CartViewController: UIViewController {
+class CartViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tabelViewDish: UITableView!
     @IBOutlet weak var сorrectData: UILabel!
@@ -19,10 +19,18 @@ class CartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabelViewDish.dataSource = self
+        tabelViewDish.delegate = self
         viewModel = CartViewModel()
         corDate = CorrectDateModel()
         tabelViewDish.rowHeight = 85
         сorrectData.text = corDate.сorDate()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabelViewDish.reloadData()
+        print("-_-")
+        print("Кол блюд \(viewModel.dishesCart.count)")
     }
 }
 

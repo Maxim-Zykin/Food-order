@@ -31,7 +31,6 @@ class DetailDishViewController: UIViewController {
         dishImage.image = UIImage(data: imageData)
     }
     
-    
     @IBAction func addCart(_ sender: Any) {
         viewModel.addCart()
         print(dishCart.count)

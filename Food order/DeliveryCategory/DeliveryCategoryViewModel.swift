@@ -12,7 +12,6 @@ protocol DeliveryCategoryViewModelProtocol {
     func fetchCategoru(completion: @escaping() -> Void)
     func numberOfRows() -> Int
     func cellViewModel(at indexPath: IndexPath) -> DeliveryCategoryCellViewModelProtocol
-    //func viewModelForSelectedRow(at indexPath: IndexPath) -> DeliveryCategoryCellViewModelProtocol
 }
 
 class DeliveryCategoryViewModel: DeliveryCategoryViewModelProtocol {
@@ -34,10 +33,5 @@ class DeliveryCategoryViewModel: DeliveryCategoryViewModelProtocol {
         let category = category[indexPath.row]
         return DeliveryCategoryCellViewModel(category: category)
     }
-    
-//    func viewModelForSelectedRow(at indexPath: IndexPath) -> DeliveryCategoryCellViewModelProtocol {
-//        let category = category[indexPath.row]
-//        return ChoiceOfDishViewModelProtocol
-//    }
 
 }

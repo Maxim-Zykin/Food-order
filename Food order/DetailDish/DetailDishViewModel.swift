@@ -20,7 +20,7 @@ protocol DetailDishViewModelProtocol: AnyObject {
 
 class DetailDishViewModel: DetailDishViewModelProtocol {
     
-    var dishName: String {
+   var dishName: String {
         "\(dishes.name)"
     }
     
@@ -51,6 +51,4 @@ class DetailDishViewModel: DetailDishViewModelProtocol {
     required init(dishes: Dishes) {
         self.dishes = dishes
     }
-    
-    
 }
