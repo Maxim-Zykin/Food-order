@@ -7,4 +7,4 @@
 
 # Screenshots
 
-![Image 1](https://github.com/Maxim-Zykin/Food-order/blob/main/food%201.png)
+![Image 1](https://github.com/Maxim-Zykin/Food-order/blob/main/food_1_.png)
