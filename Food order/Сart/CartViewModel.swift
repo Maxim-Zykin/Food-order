@@ -11,6 +11,7 @@ protocol CartViewModelProtocol {
    // var dishesCart: [ModelCart] { get }
     func numberOfRows() -> Int
     func cellViewModel(at indexPath: IndexPath) -> CartModelViewCellProtocol
+    func checkout()
 }
 
 class CartViewModel: CartViewModelProtocol {
@@ -24,5 +25,10 @@ class CartViewModel: CartViewModelProtocol {
     func cellViewModel(at indexPath: IndexPath) -> CartModelViewCellProtocol {
         let dishesCart = dishCart[indexPath.row]
         return CartModelViewCell(dishesCart: dishesCart)
+    }
+    
+    func checkout() {
+        dishCart.removeAll()
+        print(dishCart.count)
     }
 }

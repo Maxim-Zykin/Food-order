@@ -29,9 +29,14 @@ class CartViewController: UIViewController, UITableViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         tabelViewDish.reloadData()
-//        DispatchQueue.main.async {
-//            self.tabelViewDish.reloadData()
-//        }
+    }
+    
+    @IBAction func checkoutButton(_ sender: Any) {
+        AlertManager.alertСheckout(on: self)
+        viewModel.checkout()
+        DispatchQueue.main.async {
+            self.tabelViewDish.reloadData()
+        }
     }
 }
 
