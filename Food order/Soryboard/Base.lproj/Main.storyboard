@@ -187,17 +187,6 @@
                                     <constraint firstAttribute="width" constant="44" id="fTd-oK-4Ga"/>
                                 </constraints>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="w5s-Ru-FeC">
-                                <rect key="frame" x="16" y="109" width="361" height="32"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title=""/>
-                                    <segment title=""/>
-                                    <segment title=""/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" red="0.06785038719" green="0.41931616579999997" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7zU-sI-s3e">
                                 <rect key="frame" x="16" y="160" width="361" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -275,13 +264,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="26Q-mQ-Occ" firstAttribute="bottom" secondItem="BTT-dy-Rt4" secondAttribute="bottom" constant="668" id="083-9j-RA3"/>
-                            <constraint firstItem="w5s-Ru-FeC" firstAttribute="leading" secondItem="26Q-mQ-Occ" secondAttribute="leading" constant="16" id="0Az-Zr-vde"/>
                             <constraint firstItem="BTT-dy-Rt4" firstAttribute="trailing" secondItem="Xwo-4t-4sK" secondAttribute="trailingMargin" id="Fsl-TU-i8y"/>
-                            <constraint firstItem="7zU-sI-s3e" firstAttribute="top" secondItem="w5s-Ru-FeC" secondAttribute="bottom" constant="20" id="Gug-fS-jga"/>
+                            <constraint firstItem="7zU-sI-s3e" firstAttribute="top" secondItem="26Q-mQ-Occ" secondAttribute="top" constant="57" id="LRG-Cc-hsD"/>
                             <constraint firstItem="7zU-sI-s3e" firstAttribute="leading" secondItem="26Q-mQ-Occ" secondAttribute="leading" constant="16" id="QYE-O4-lfM"/>
-                            <constraint firstItem="26Q-mQ-Occ" firstAttribute="trailing" secondItem="w5s-Ru-FeC" secondAttribute="trailing" constant="16" id="Z0n-Xl-yvb"/>
+                            <constraint firstItem="BTT-dy-Rt4" firstAttribute="top" secondItem="Xwo-4t-4sK" secondAttribute="top" constant="57" id="YOX-CV-yqh"/>
                             <constraint firstItem="26Q-mQ-Occ" firstAttribute="trailing" secondItem="7zU-sI-s3e" secondAttribute="trailing" constant="16" id="lgz-FQ-ZWT"/>
-                            <constraint firstItem="w5s-Ru-FeC" firstAttribute="top" secondItem="26Q-mQ-Occ" secondAttribute="top" constant="6" id="pR4-N2-JmL"/>
                             <constraint firstAttribute="bottomMargin" secondItem="7zU-sI-s3e" secondAttribute="bottom" constant="-14" id="zsR-zO-a2T"/>
                         </constraints>
                     </view>
@@ -289,7 +276,6 @@
                     <connections>
                         <outlet property="dishCollection" destination="7zU-sI-s3e" id="AWQ-2l-TxT"/>
                         <outlet property="indicatorActivity" destination="54P-pl-Q30" id="XI9-Ix-z6p"/>
-                        <outlet property="tegsSegmented" destination="w5s-Ru-FeC" id="vgI-dg-bwR"/>
                         <segue destination="GeW-Qu-Spn" kind="presentation" identifier="detainDish" id="Hh9-wm-ED3"/>
                     </connections>
                 </viewController>
@@ -598,6 +584,7 @@
                             <constraint firstItem="JKW-Ji-7nN" firstAttribute="leading" secondItem="srS-bo-RgT" secondAttribute="leading" constant="41" id="slZ-d2-5o9"/>
                             <constraint firstItem="srS-bo-RgT" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JKW-Ji-7nN" secondAttribute="trailing" id="t2O-3Z-22G"/>
                             <constraint firstItem="JKW-Ji-7nN" firstAttribute="top" secondItem="efl-kz-EUL" secondAttribute="bottom" constant="35" id="tr6-S8-PzS"/>
+                            <constraint firstItem="srS-bo-RgT" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MRE-Uf-Kac" secondAttribute="trailing" symbolic="YES" id="vPh-Wc-NBY"/>
                             <constraint firstItem="9UE-Yf-a24" firstAttribute="leading" secondItem="UcO-5H-4pV" secondAttribute="trailing" constant="15" id="x1I-Nf-3Co"/>
                         </constraints>
                     </view>

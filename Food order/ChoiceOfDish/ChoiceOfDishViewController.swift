@@ -10,7 +10,6 @@ import UIKit
 class ChoiceOfDishViewController: UIViewController {
 
     @IBOutlet weak var dishCollection: UICollectionView!
-    @IBOutlet weak var tegsSegmented: UISegmentedControl!
     @IBOutlet weak var indicatorActivity: UIActivityIndicatorView!
     
     private var viewModel: ChoiceOfDishViewModelProtocol! {
@@ -27,7 +26,7 @@ class ChoiceOfDishViewController: UIViewController {
     }
     
     var titleCategory: String = ""
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = ChoiceOfDishViewModel()
