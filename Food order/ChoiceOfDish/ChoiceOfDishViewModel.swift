@@ -39,5 +39,4 @@ class ChoiceOfDishViewModel: ChoiceOfDishViewModelProtocol {
         let dishes = dishes[indexPath.row]
         return DetailDishViewModel(dishes: dishes)
     }
-    
 }

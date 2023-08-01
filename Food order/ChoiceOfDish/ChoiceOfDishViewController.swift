@@ -16,11 +16,11 @@ class ChoiceOfDishViewController: UIViewController {
         didSet {
             indicatorActivity.startAnimating()
             viewModel.fetchDish {
-                DispatchQueue.main.async {
+               DispatchQueue.main.async {
                     self.dishCollection.reloadData()
                     self.indicatorActivity.stopAnimating()
                     self.indicatorActivity.isHidden = true
-                }
+               }
             }
         }
     }

@@ -23,10 +23,14 @@ class AlertManager {
 
 extension AlertManager {
     public static func alertAddCart(on vc: UIViewController) {
-        self.showBasicAlert(on: vc, with: "Добавлено", and: nil)
+        self.showBasicAlert(on: vc, with: "Добавлено", and: "")
     }
     
     public static func alertСheckout(on vc: UIViewController) {
         self.showBasicAlert(on: vc, with: "Спасибо за заказ", and: "Ваш заказ принят и отправлен на кухню.")
+    }
+    
+    public static func alertNotСheckout(on vc: UIViewController) {
+        self.showBasicAlert(on: vc, with: "Упс...", and: "Для заказа добавьте сначала в корзину")
     }
 }

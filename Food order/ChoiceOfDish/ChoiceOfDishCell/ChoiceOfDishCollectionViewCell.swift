@@ -15,9 +15,12 @@ class ChoiceOfDishCollectionViewCell: UICollectionViewCell {
     var viewModel: ChoiceOfDishCellViewModelProtocol! {
         didSet {
             self.dishNameLabel.text = viewModel.dishName
-            guard let imageData = viewModel.dishImade else { return }
-            self.dishImage.image = UIImage(data: imageData)
-            
+            DispatchQueue.global().async {
+                guard let imageData = self.viewModel.dishImade else { return }
+                DispatchQueue.main.async {
+                    self.dishImage.image = UIImage(data: imageData)
+                }
+           }
         }
     }
 }

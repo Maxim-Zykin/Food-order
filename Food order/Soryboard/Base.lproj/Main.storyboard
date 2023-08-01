@@ -430,7 +430,7 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Оплатить"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Оформить"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -464,6 +464,7 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Title" id="I28-0v-hp7"/>
                     <connections>
+                        <outlet property="checkoutButton" destination="LDV-9a-yHz" id="GE4-Tg-I2q"/>
                         <outlet property="payButton" destination="LDV-9a-yHz" id="FAL-qC-JGu"/>
                         <outlet property="tabelViewDish" destination="U5G-qb-wJP" id="enS-wJ-fSE"/>
                         <outlet property="сorrectData" destination="FF2-k5-j8e" id="GdK-RJ-BaO"/>

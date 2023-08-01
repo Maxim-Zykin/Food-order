@@ -15,8 +15,12 @@ class DeliveryCategoryCollectionViewCell: UICollectionViewCell {
     var viewModel: DeliveryCategoryCellViewModelProtocol! {
         didSet {
             self.categoryLanel.text = viewModel.name
-            guard let imageData = viewModel.image else { return }
-            self.categoryImage.image = UIImage(data: imageData)
+            DispatchQueue.global().async {
+                guard let imageData = self.viewModel.image else { return }
+                DispatchQueue.main.async {
+                    self.categoryImage.image = UIImage(data: imageData)
+                }
+            }
         }
     }
 }
