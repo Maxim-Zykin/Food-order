@@ -27,8 +27,12 @@ class DetailDishViewController: UIViewController {
         priseDishLabel.text = viewModel.dishPrice
         dishWeightLabel.text = viewModel.dishWeight
         descriptionDishLabel.text = viewModel.dishDescription
-        guard let imageData = viewModel.dishImade else { return }
-        dishImage.image = UIImage(data: imageData)
+        DispatchQueue.global().async {
+            guard let imageData = self.viewModel.dishImade else { return }
+            DispatchQueue.main.async {
+                self.dishImage.image = UIImage(data: imageData)
+            }
+        }
     }
     
     @IBAction func addCart(_ sender: Any) {

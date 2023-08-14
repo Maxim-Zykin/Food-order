@@ -253,6 +253,14 @@
                                             <outlet property="dishNameLabel" destination="QHH-Em-d87" id="uUL-aM-hr0"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JTv-Md-B49">
+                                        <rect key="frame" x="126" y="0.0" width="109" height="144"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bYP-Ok-k4G">
+                                            <rect key="frame" x="0.0" y="0.0" width="109" height="144"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="W8h-bU-SZD" id="cML-Xc-9F7"/>

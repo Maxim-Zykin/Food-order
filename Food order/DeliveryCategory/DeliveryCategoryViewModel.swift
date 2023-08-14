@@ -23,7 +23,7 @@ class DeliveryCategoryViewModel: DeliveryCategoryViewModelProtocol {
             self?.category = category
             completion()
         }
-    } 
+    }
     
     func numberOfRows() -> Int {
         category.count
@@ -33,5 +33,4 @@ class DeliveryCategoryViewModel: DeliveryCategoryViewModelProtocol {
         let category = category[indexPath.row]
         return DeliveryCategoryCellViewModel(category: category)
     }
-
 }
