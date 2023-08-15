@@ -16,8 +16,12 @@ class CartTableViewCell: UITableViewCell {
     
     var viewModel: CartModelViewCellProtocol! {
         didSet {
-            guard let imageData = viewModel.dishImade else { return }
-            self.dishImage.image = UIImage(data: imageData)
+            DispatchQueue.global().async {
+                guard let imageData = self.viewModel.dishImade else { return }
+                DispatchQueue.main.async {
+                    self.dishImage.image = UIImage(data: imageData)
+                }
+            }
             self.nameDishLabel.text = viewModel.dishName
             self.priceDishLabel.text = viewModel.dishPrice
             self.weightDishLabel.text = viewModel.dishWeight
