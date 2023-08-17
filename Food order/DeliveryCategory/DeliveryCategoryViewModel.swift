@@ -18,12 +18,25 @@ class DeliveryCategoryViewModel: DeliveryCategoryViewModelProtocol {
 
     var category: [Сategory] = []
     
+    private let apiCategory = "https://run.mocky.io/v3/058729bd-1402-4578-88de-265481fd7d54"
+    
     func fetchCategoru(completion: @escaping () -> Void) {
-        NetworkManager.shared.fetchData { [weak self] category in
-            self?.category = category
-            completion()
+        NetworkManager<Group>.fetchData(urlJSON: apiCategory) { [weak self] (result) in
+            switch result {
+            case .success(let response):
+                self!.category = response.сategories
+                completion()
+            case .failure(let error):
+                print(error)
+            }
         }
     }
+//    func fetchCategoru(completion: @escaping () -> Void) {
+//        NetworkManager.shared.fetchData { [weak self] category in
+//            self?.category = category
+//            completion()
+//        }
+//    }
     
     func numberOfRows() -> Int {
         category.count

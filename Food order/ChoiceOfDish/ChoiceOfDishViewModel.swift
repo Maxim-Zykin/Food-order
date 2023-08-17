@@ -19,12 +19,26 @@ class ChoiceOfDishViewModel: ChoiceOfDishViewModelProtocol {
     
     var dishes: [Dishes] = []
     
+    private let apiDishes = "https://run.mocky.io/v3/aba7ecaa-0a70-453b-b62d-0e326c859b3b"
+    
     func fetchDish(completion: @escaping () -> Void) {
-        NetworkManager.shared.fetchDataDish { [weak self] dishes in
-            self?.dishes = dishes
-            completion()
+        NetworkManager<GroupDish>.fetchData(urlJSON: apiDishes) { (result) in
+            switch result {
+            case .success(let response):
+                self.dishes = response.dishes
+                completion()
+            case .failure(let error):
+                print(error)
+            }
         }
     }
+    
+//    func fetchDish(completion: @escaping () -> Void) {
+//        NetworkManager.shared.fetchDataDish { [weak self] dishes in
+//            self?.dishes = dishes
+//            completion()
+//        }
+//    }
     
     func numberOfRows() -> Int {
         dishes.count
