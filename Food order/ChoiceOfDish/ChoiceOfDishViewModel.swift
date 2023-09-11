@@ -22,7 +22,8 @@ class ChoiceOfDishViewModel: ChoiceOfDishViewModelProtocol {
     private let apiDishes = "https://run.mocky.io/v3/aba7ecaa-0a70-453b-b62d-0e326c859b3b"
     
     func fetchDish(completion: @escaping () -> Void) {
-        NetworkManager<GroupDish>.fetchData(urlJSON: apiDishes) { (result) in
+        NetworkManager<GroupDish>.fetchData(urlJSON: apiDishes) { [weak self] (result) in
+            guard let self = self else { return }
             switch result {
             case .success(let response):
                 self.dishes = response.dishes

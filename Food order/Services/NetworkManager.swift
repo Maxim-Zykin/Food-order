@@ -21,10 +21,10 @@ final class NetworkManager<T: Codable> {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let category = try decoder.decode(T.self, from: data)
-                DispatchQueue.global(qos: .userInitiated).async {
+                //DispatchQueue.global(qos: .userInitiated).async {
                     completion(.success(category))
                     print(category)
-                }
+               // }
             } catch let error {
                 print("Error--", error)
             }

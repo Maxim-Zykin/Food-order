@@ -22,9 +22,10 @@ class DeliveryCategoryViewModel: DeliveryCategoryViewModelProtocol {
     
     func fetchCategoru(completion: @escaping () -> Void) {
         NetworkManager<Group>.fetchData(urlJSON: apiCategory) { [weak self] (result) in
+            guard let self = self else { return }
             switch result {
             case .success(let response):
-                self!.category = response.сategories
+                self.category = response.сategories
                 completion()
             case .failure(let error):
                 print(error)
